@@ -1,0 +1,170 @@
+================================================================================
+MULTI-AGENT MCP DEMO - TEST SUITE
+================================================================================
+
+================================================================================
+TEST 1: Direct Tool - get_store_hours
+================================================================================
+Query: What are your store hours?
+
+Running agent customer_service, type exit to exit.
+/usr/local/lib/python3.11/dist-packages/google/adk/cli/cli.py:98: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  else App(name=session.app_name, root_agent=root_agent_or_app)
+[user]: [customer_service]: Our store hours are:
+
+*   Customer Service: 9 AM - 6 PM EST, Monday-Friday
+*   Online Store: 24/7
+*   Phone: 1-800-EXAMPLE
+[user]: 
+Aborted!
+
+================================================================================
+TEST 2: Direct Tool - get_return_policy
+================================================================================
+Query: What is your return policy?
+
+Running agent customer_service, type exit to exit.
+/usr/local/lib/python3.11/dist-packages/google/adk/cli/cli.py:98: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  else App(name=session.app_name, root_agent=root_agent_or_app)
+[user]: [customer_service]: Our return policy allows for returns within 30 days of purchase. Items must be unopened and unused to be eligible for a return. Refunds will be issued to the original payment method. We do not charge a restocking fee for defective items. However, there is a 15% restocking fee for other returns.
+[user]: 
+Aborted!
+
+================================================================================
+TEST 3: Agent Tool - inventory_agent -> MCP check_stock
+================================================================================
+Query: Is PROD-001 in stock?
+
+Running agent customer_service, type exit to exit.
+/usr/local/lib/python3.11/dist-packages/google/adk/cli/cli.py:98: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  else App(name=session.app_name, root_agent=root_agent_or_app)
+[user]: 
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     Inventory Service                      │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+--
+[customer_service]: Yes, PROD-001 (Laptop Pro 15) is in stock.
+
+[user]: 
+Aborted!
+
+================================================================================
+TEST 4: Agent Tool - inventory_agent -> MCP get_low_stock_products
+================================================================================
+Query: Show me products with low stock
+
+Running agent customer_service, type exit to exit.
+/usr/local/lib/python3.11/dist-packages/google/adk/cli/cli.py:98: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  else App(name=session.app_name, root_agent=root_agent_or_app)
+[user]: 
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     Inventory Service                      │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+--
+[customer_service]: OK. The following product is low in stock: Monitor 27in (PROD-004), with 15 units remaining. Please consider restocking.
+
+[user]: 
+Aborted!
+
+================================================================================
+TEST 5: Agent Tool - shipping_agent -> MCP track_shipment
+================================================================================
+Query: Track shipment SHIP-002
+
+Running agent customer_service, type exit to exit.
+/usr/local/lib/python3.11/dist-packages/google/adk/cli/cli.py:98: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  else App(name=session.app_name, root_agent=root_agent_or_app)
+[user]: 
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     Shipping Service                       │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+
+================================================================================
+TEST 6: Agent Tool - shipping_agent -> MCP get_active_shipments
+================================================================================
+Query: Show me all active shipments
+
+Running agent customer_service, type exit to exit.
+/usr/local/lib/python3.11/dist-packages/google/adk/cli/cli.py:98: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+  else App(name=session.app_name, root_agent=root_agent_or_app)
+[user]: Traceback (most recent call last):
+  File "/usr/local/bin/adk", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/click/core.py", line 1462, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/click/core.py", line 1383, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/click/core.py", line 1850, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/click/core.py", line 1246, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/click/core.py", line 814, in invoke
+    return callback(*args, **kwargs)
+
+================================================================================
+ALL TESTS COMPLETED
+================================================================================
+
+Architecture Demonstrated:
+  Main Agent (customer_service)
+  ├─→ Direct Tools: get_store_hours(), get_return_policy()
+  ├─→ AgentTool: inventory_agent
+  │   └─→ MCPToolset: Inventory MCP Server (FastMCP)
+  │       ├─→ check_stock()
+  │       └─→ get_low_stock_products()
+  └─→ AgentTool: shipping_agent
+      └─→ MCPToolset: Shipping MCP Server (FastMCP)
+          ├─→ track_shipment()
+          └─→ get_active_shipments()
+
+✅ Main agent uses sub-agents as tools (AgentTool pattern)
+✅ Sub-agents use MCP tools (MCPToolset pattern)
+✅ FastMCP servers provide the actual tool implementations
+✅ Complete lineage tracking available in ADK web UI Trace tab
