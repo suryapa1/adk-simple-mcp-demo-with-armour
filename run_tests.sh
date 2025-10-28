@@ -1,7 +1,7 @@
 #!/bin/bash
 # Test script for multi-agent MCP demo
 
-export GOOGLE_API_KEY=AIzaSyBWgnZ7mHGz1kou8q7NDsf_aRDUxPcmd9A
+export GOOGLE_API_KEY=
 cd /home/ubuntu/adk-simple-mcp-demo
 
 echo "================================================================================"
